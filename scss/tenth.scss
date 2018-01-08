@@ -1,0 +1,100 @@
+@import "vars";
+
+.tenth {
+	&_wrapper {
+		background:transparent url('../img/tenth_map.png') scroll no-repeat center center / cover;
+		text-align: center;
+	}
+
+	&_main {
+		&-wrapper {
+			position: relative;
+			padding-top: 2em;
+		}
+
+		&-back {
+			width: 70em;
+			margin-right: -2em;
+		}
+	}
+
+	&_block {
+		&-wrapper {
+			background-color: #fff;
+			position: absolute;
+			top: 19em;
+			left: 50%;
+			width: 29em;
+			margin-left: -14.5em;
+			font-family: $main-font;
+			padding: 1.5em .2em;
+
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		&-right {
+			text-align: left;
+			padding-left: 1em;
+		}
+		&-title {
+			font-size: 1.3em;
+			margin-bottom: .8em;
+		}
+		&-desc {
+			margin-top: .7em;
+			color: #343b4d;
+			font-size: 1em;
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&-square {
+				margin-right: 1em;
+				width: 5px;
+				height: 5px;
+				background-color: #999da6;
+			}
+		}
+
+		&-way {
+			display: inline-block;
+			font-size: 1em;
+			text-decoration: none;
+			border-bottom: 1px dashed rgba(0,0,0,.4);
+			color: #343b4d;
+			margin-left: 1.4em;
+			margin-top: .8em;
+		}
+		&-logo {
+			width: 6.68em;
+		}
+	}
+}
+
+@media (max-width: 1000px){
+	.tenth {
+		&_wrapper {
+			height: 35em;
+		}
+		&_main {
+			&-back {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px){
+	.tenth {
+		&_block {
+			&-wrapper {
+				width: 100%;
+				left: 0;
+				margin: 0;
+			}
+		}
+	}
+}

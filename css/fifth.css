@@ -1,0 +1,69 @@
+.fifth_main-item-title {
+  font-family: AGP-bold; }
+
+.fifth_wrapper {
+  background: transparent url("../img/fifth_back.png") scroll no-repeat center center/cover;
+  text-align: center;
+  padding-bottom: 6em; }
+
+.fifth_main-wrapper {
+  margin-top: 1em;
+  padding-left: .8em; }
+  .fifth_main-wrapper > * {
+    display: inline-block;
+    vertical-align: top; }
+
+.fifth_main-item {
+  position: relative;
+  width: 20em;
+  height: 12em;
+  text-align: center;
+  white-space: nowrap;
+  margin-right: .8em;
+  margin-top: 3em; }
+  .fifth_main-item:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; }
+  .fifth_main-item-lines {
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    width: 7em; }
+  .fifth_main-item-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    stroke-width: 8px;
+    stroke: #f9c038;
+    fill: none; }
+  .fifth_main-item-title {
+    padding: 0 2em;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal; }
+  .fifth_main-item-button {
+    position: absolute;
+    left: 50%;
+    margin-left: -7em;
+    margin-top: -1.5em;
+    width: 14em;
+    color: #3b3b3b; }
+
+@media (max-width: 1400px) {
+  .fifth_main-wrapper {
+    font-size: 13px; } }
+
+@media (max-width: 1150px) {
+  .fifth_main-wrapper {
+    font-size: 12px; } }
+
+@media (max-width: 550px) {
+  .fifth_main-wrapper {
+    margin-top: -2em; } }

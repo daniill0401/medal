@@ -1,0 +1,357 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=1000")
+		link(rel="stylesheet", href="css/main.css")
+		link(rel="stylesheet", href="css/menu.css")
+		link(rel="stylesheet", href="css/first.css")
+		link(rel="stylesheet", href="css/second.css")
+		link(rel="stylesheet", href="css/third.css")
+		link(rel="stylesheet", href="css/forth.css")
+		link(rel="stylesheet", href="css/fifth.css")
+		link(rel="stylesheet", href="css/sixth.css")
+		link(rel="stylesheet", href="css/seventh.css")
+		link(rel="stylesheet", href="css/eighth.css")
+		link(rel="stylesheet", href="css/ninth.css")
+		link(rel="stylesheet", href="css/tenth.css")
+		link(rel="stylesheet", href="css/footer.css")
+		link(rel="stylesheet", href="css/review.css")
+		link(rel="stylesheet", href="css/forms.css")
+		link(rel="stylesheet", type="text/css", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+		link(rel="stylesheet", type="text/css", href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css")
+	body
+		section.menu_wrapper
+			.menu_wrapper-inner
+				.menu_logo-wrapper
+					a.menu_logo-link(href="/")
+						img.menu_logo-img(src="img/menu_logo.png")
+				.menu_address-wrapper
+					p.menu_address-desc!="Санкт-Петербург,<br>пр. Елизарова 34, БЦ \"KROL\"<br>zakaz@geraldzavod.ru"
+				nav.menu_main-wrapper
+					- var items = ["главная", "изделия", "опыт", "качество", "клиенты"]
+					- var anchors = ["main", "goods", "exp", "qual", "clients"]
+					h2.menu_main-title="Меню"
+					.menu_main-wrapper-inner
+						each item,index in items
+							.menu_main-item(class="menu_main-item-"+(index+1), data-scroll=anchors[index])
+								span.menu_main-item-text=item
+				.menu_phones-wrapper
+					img.menu_phones-icon(src="img/menu_phone-icon.png")
+					.menu_phones-number-wrapper
+						p.menu_phones-number-item="8 (812) 244-27-06"
+						p.menu_phones-number-item="8 (800) 707-51-64"
+				p.menu_button.popup_trigger(data-form="popup_single-wrapper") Обратный звонок
+		section.first_wrapper#main
+			.first_main-wrapper.wow
+				svg.first_main-line.first_main-line-left(viewBox="0 0 300 400")
+					g
+						path(d="M80,0 L0,0 L0,400 L300,400")
+				h1.first_main-title.wow.fadeIn
+					span.yellow_text="Изготовление значков, медалей"
+					|  и монет с доставкой по всей России
+				p.first_main-caption.wow.fadeIn(data-wow-delay="0.2s")="C бесплатной доставкой по всей России"
+				p.first_main-desc.wow.fadeIn(data-wow-delay="0.4s")="Собственное производство с железной гарантией сроков"
+				svg.first_main-line.first_main-line-right(viewBox="0 0 300 400")
+					g
+						path(d="M220,0 L300,0 L300,400 0,400")
+			.first_medal-wrapper
+				img.first_medal-img(src="img/first_medal.png")
+			.first_get-wrapper
+				h2.first_get-title.wow.fadeInDown="Получите разработку макета"
+				h3.first_get-desc.wow.fadeInDown="бесплатно"
+				img.first_get-medals.wow.fadeIn(src="img/first_sub-medals.png")
+				form.first_get-form
+					input.first_get-input.first_get-input-1.input.wow.fadeInUp(type="text", data-placeholder="Ваше имя:", value="Ваше имя:", name="name")
+					input.first_get-input.first_get-input-2.input.wow.fadeInUp(type="text", data-placeholder="Ваш номер телефон:", value="Ваш номер телефон:", name="phone")
+					input.first_get-input.first_get-input-3.input.wow.fadeInUp(type="text", data-placeholder="Ваш Email:", value="Ваш Email:", name="email")
+					br
+					input.first_get-button.button.wow.fadeInUp(type="button", value="Получить макет")
+		section.second_wrapper#goods
+			h1.second_title.title_f.wow.fadeInDown="Мы изготавливаем"
+			.second_main-wrapper
+				- var items = ["Нагрудные знаки", "Медали", "монеты"]
+				each val,index in items
+					.second_main-item
+						.second_main-box.wow.fadeInUp(data-wow-delay=index*0.2+"s")
+							.second_main-box-back.show_scale-next
+							- var dim = ".png"
+							if index == 2
+								- var dim = ".jpg"
+							img.second_main-img.show_scale(src="img/second_img-"+(index+1)+dim)
+							p.second_main-caption=val
+							button.second_main-button.button.popup_trigger(data-form="popup_bill-wrapper")="Заказать расчет"
+		section.third_wrapper#exp
+			.third_top-wrapper
+				h1.third_title.title_s.wow.fadeInDown!="Почему более <span class='red_text'>457</span> компаний <br>выбирают нас?"
+				.third_main-wrapper
+					- var titles_left = ["Бесплатная доставка по всей РФ", "более 10 технологий<br> (про чернение и др, возможно сделать разрез в фото)", "Выбор более чем из 8 материалов"]
+					- var titles_right = ["Ручная дорисовка", "Сроки от 10 дней", "Увеличенный рельеф"]
+					- var descs_left = ["Вне зависимости от веса и стоимости заказа. Всю доставку мы организуем за вас - вам лишь надо будет открыть дверь для курьера.", "Чернение, гальваническое покрытие, пескоструйная обработка, химическая полировка, покрытие тонирующим лаком - мы придадим вашему изделию именно тот вид, который вы хотите.", "Даем гарантию, что ваши изделия будут сделаны ограниченным тиражом и не будут проданы третьим лицам. Мы прописываем это в договоре."]
+					- var descs_right = ["Наш гравюр вручную под микроскопом дорабатывает штамп вашего изделия, что гарантирует идеальное качество линий и букв. ", "Заказывая изделие, вы можете быть уверены, что оно будет готово точно в срок, прописанный в договоре. Для особых случаев мы может сделать еще быстрее.", "Ваши изделия будут смотреться еще более притягательно, благодаря гидравлическому прессу мощностью 100 тонн. С его помощью мы можем увеличить рельеф записей и рисунков до 2 мм"]
+					- var desc = "Даем гарантию, что ваши изделия будут сделаны ограниченным тиражом и не будут проданы третьим лицам. Мы прописываем это в договоре."
+					.third_main-left
+						each val,index in titles_left
+							.third_main-block.third_main-block-left.wow.fadeInLeft(class="third_main-block-"+(index+1), data-wow-delay=index*0.2+"s")
+								.third_main-block-top
+									h3.third_main-block-title!=val
+									img.third_main-block-img.third_main-block-img-left(src="img/third_icon-"+(index+1)+".png")
+									.third_main-block-line.third_main-block-line-left
+								.third_main-block-desc.third_main-block-desc-right=descs_left[index]
+					img.third_main-medal(src="img/third_medal.png")
+					.third_main-right
+						each val,index in titles_right
+							.third_main-block.third_main-block-right.wow.fadeInRight(class="third_main-block-"+(index+4), data-wow-delay=index*0.2+"s")
+								.third_main-block-top
+									img.third_main-block-img.third_main-block-img-right(src="img/third_icon-"+(index+4)+".png")
+									h3.third_main-block-title!=val
+									.third_main-block-line.third_main-block-line-right
+								.third_main-block-desc.third_main-block-desc-left=descs_right[index]
+			.third_bottom-wrapper#qual
+				h1.third_bottom-title.title_s.wow.fadeInDown!="Что позволяет нам давать железные <br>гарантии?"
+				- var titles = ["Пресс с усилием 400 тонн обеспечивает максимальное качество рельефа", "До 8000 заготовок за смену производит вырубной пресс", "Собственное производство", "Ювелирное литье: изготавливаем изделие любой формы из золота, серебра, латуни или мельхиора", "Мастера с 20-летним опытом", "Производим 30 000 изделий в месяц"]
+				p.third_bottom-desc=titles[0]
+				- var images = new Array(5);
+				.third_bottom-slider-wrapper
+					.third_bottom-slider-fill
+						.third_bottom-slider-back.show_scale-slick
+						.third_bottom-slider-inner
+							each val, index in images
+								.third_bottom-slider-block(data-title=titles[index])
+									img.third_bottom-slider-block-img(src="img/third_img-"+(index+1)+".jpg")
+				.third_bottom-collection
+					each val, index in images
+						img.third_bottom-collection-img.wow.fadeInUp(src="img/third_img-"+(index+1)+".jpg", data-wow-delay=index*0.2+"s")
+		section.forth_wrapper
+			.forth_main-wrapper
+				svg.forth_main-line(viewBox="0 0 1038 622")
+					g
+						path(d="M60,1 L1,1 L1,622 L190,622")
+					g
+						path(d="M850,1 1038,1 1038,622 L528,622", stroke="black")
+					g
+						path(d="M750,1 L660,1")
+				.forth_main-left
+					h1.forth_main-title.forth_main-title-first="Над Вашим эскизом будет работать "
+					h1.forth_main-title.forth_main-title-second="профессиональный художник"
+					.forth_main-list-wrapper
+						p.forth_main-list-title="Виктор Жеравин:"
+						- var lis = ["Дизайнерский стаж 15 лет", "Разработал более 1000 эскизов нагрудных знаков и медалей", "Победил в 21 дизайнерском конкурсе"]
+						ul.forth_main-list-ul
+							each val in lis
+								li.forth_main-list-li=val
+					.forth_main-check-wrapper
+						p.forth_main-check-title="Ознакомьтесь с примерами его эскизов"
+						p.forth_main-check-caption="Нажмите на фотографию"
+					- var images = ["img/sixth_img-4.jpg", "img/seventh_img-4.jpg", "img/forth_img-3.jpg"];
+					.forth_main-images
+						each val,index in images
+							.forth_main-img.show_scale(class="forth_main-img-"+(index+1), style="background-image: url("+val+")")
+					.forth_main-button.button.popup_trigger(data-form="popup_icons-wrapper")="Получить 3 эскиза бесплатно"
+				.forth_main-right
+					img.forth_main-man(src="img/forth_man.png")
+		section.fifth_wrapper#clients
+			h1.fifth_title.title_f.wow.fadeInDown="наши клиенты"
+			- var items = ["Тендеры", "Рекламные агентства", "Компании среднего и крупного бизнеса", "Представители"]
+			.fifth_main-wrapper
+				each val,index in items
+					.fifth_main-item.wow.fadeInUp(class="fifth_main-item-"+(index+1), data-wow-delay=index*0.2+"s")
+						img.fifth_main-item-lines(src="img/fifth_lines.png")
+						svg.fifth_main-item-svg(viewBox="0 0 320 190")
+							g
+								path(d="M0,0 L320,0 L320,190 284,190 M36,190 L0,190 L0,0")
+						h2.fifth_main-item-title=val
+						- var form = "popup_com-wrapper"
+						if index == 0
+							- var form = "popup_commer-wrapper"
+						.fifth_main-item-button.button.popup_trigger(data-form=form)="Посмотреть примеры"
+		section.sixth_wrapper
+			.sixth_left
+				.sixth_slider-wrapper
+					.sixth_slider-back.show_scale-next
+					.sixth_slider-window.show_scale
+					.scaled
+				- var images = new Array(4);
+				.sixth_left-items
+					each val, index in images
+						.sixth_left-item(style="background-image: url(img/sixth_img-"+(index+2)+".jpg)")
+			.sixth_right
+				img.sixth_logo(src="img/sixth_logo.png")
+				h1.sixth_title="Нас выбирают, когда хотят избавиться от рисков, работая с профессионалами своего дела"
+				p.sixth_desc="это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но"
+				.sixth_right-indicators
+					span.sixth_right-indicators-item.sixth_right-indicators-item-left="ТИРАЖ: 2000"
+					span.sixth_right-indicators-item.sixth_right-indicators-item-right="СРОК: 24 дня"
+		section.seventh_wrapper
+			.seventh_top-wrapper
+				.seventh_right
+					img.seventh_logo(src="img/seventh_logo.png")
+					h1.seventh_title="Нас выбирают, когда требуется идеальное красота и качество даже в сжатые сроки"
+					p.seventh_desc="это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но"
+					.seventh_right-indicators
+						span.seventh_right-indicators-item.seventh_right-indicators-item-left="ТИРАЖ: 2000"
+						span.seventh_right-indicators-item.seventh_right-indicators-item-right="СРОК: 24 дня"
+				.seventh_left
+					.seventh_slider-wrapper
+						.seventh_slider-back.show_scale-next
+						.seventh_slider-window.show_scale
+						.scaled
+					- var images = new Array(4);
+					.seventh_left-items
+						each val, index in images
+							.seventh_left-item(style="background-image: url(img/seventh_img-"+(index+2)+".jpg)")
+			.seventh_bottom-wrapper
+				h1.seventh_bottom-title!="Свидетельство о постановке на учет в государственной пробирной инспекции.<br> Каждое наше изделие из драгоценного металла имеет государственное пробирное клеймо."
+				.seventh_cert-wrapper
+					.seventh_cert-back
+					img.seventh_cert-img.show_scale(src="img/seventh_bottom-cert.png")
+		section.eighth_wrapper
+			h1.eighth_title.title_f.wow.fadeInDown="Что о нас говорят?"
+			.eighth_slider-wrapper
+				- var certs = new Array(4);
+				each val,index in certs
+					.eighth_slider-item-wrapper.wow.fadeInUp(data-wow-delay=index*0.2+"s")
+						.eighth_slider-item-back.show_scale-slick
+						.eighth_slider-item-img.show_scale(style="background-image: url(/img/eighth_img-"+(index+1)+".jpg)")
+		section.ninth_wrapper.clearfix
+			h1.ninth_title.title_s.wow.fadeInDown!="Выгоды от сотрудничества<br>с нами"
+			.ninth_left
+				.ninth_blocks
+					- var icons = new Array(6);
+					- var titles = ["собственное производство", "изготавливаем монеты любой сложности", "сроки от 10 дней", "победы в 21 дизайнером конкурсе", "ручная дорисовка", "Работаем по всей РФ"]
+					.ninth_blocks-row
+						each val, index in titles
+							if index < 3
+								.ninth_block.wow.fadeIn(class="ninth_block-"+(index+1), data-wow-delay=index*0.2+"s")
+									img.ninth_block-img(src="img/ninth_icon-"+(index+1)+".png")
+									p.ninth_block-title=val
+					.ninth_blocks-row
+						each val, index in titles
+							if index >= 3
+								.ninth_block.wow.fadeIn(class="ninth_block-"+(index+1), data-wow-delay=index*0.2+"s")
+									img.ninth_block-img(src="img/ninth_icon-"+(index+1)+".png")
+									p.ninth_block-title=val
+			.ninth_right
+				form.ninth_right-form
+					input.ninth_right-input.input(type="text", data-placeholder="Ваше имя:", value="Ваше имя:", name="name")
+					input.ninth_right-input.input(type="text", data-placeholder="Ваш номер телефон:", value="Ваш номер телефон:", name="phone")
+					input.ninth_right-input.input(type="text", data-placeholder="Ваш Email:", value="Ваш Email:", name="email")
+					br
+					input.ninth_right-button.button(type="button", value="Получить макет")
+					img.ninth_medal(src="img/ninth_medal.png")
+		section.tenth_wrapper
+			.tenth_main-wrapper
+				img.tenth_main-back(src="img/tenth_main-back.png")
+				.tenth_block-wrapper
+					img.tenth_block-logo(src="img/tenth_logo.png")
+					.tenth_block-right
+						h1.tenth_block-title!="Санкт-Петербург,<br> пр. Елизарова 34, БЦ \"KROL\""
+						p.tenth_block-desc
+							span.tenth_block-desc-square
+							| График работы: с 8:00 до 20:00
+						p.tenth_block-desc
+							span.tenth_block-desc-square
+							| Телефон: 8 (800) 707-51-64
+						p.tenth_block-desc
+							span.tenth_block-desc-square
+							| zakaz@geraldzavod.ru
+						a.tenth_block-way(target="_blank", href="https://www.google.ru/maps/dir//KROL,+%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D1%86%D0%B5%D0%BD%D1%82%D1%80,+%D0%BF%D1%80-%D0%BA%D1%82+%D0%95%D0%BB%D0%B8%D0%B7%D0%B0%D1%80%D0%BE%D0%B2%D0%B0,+34,+%D0%BB%D0%B8%D1%82.+%D0%90,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+192148/@59.881861,30.3989286,17z/data=!4m15!1m6!3m5!1s0x46962fc300cc26df:0x45fdefb566f603cb!2zS1JPTCwg0LHQuNC30L3QtdGBLdGG0LXQvdGC0YA!8m2!3d59.8818583!4d30.4011226!4m7!1m0!1m5!1m1!1s0x46962fc300cc26df:0x45fdefb566f603cb!2m2!1d30.4011226!2d59.8818583")="Как проехать"
+		footer.footer_wrapper
+			a.footer_logo-link(href="/")
+				img.footer_logo(src="img/footer_logo.png")
+			nav.menu_main-wrapper.footer_menu-wrapper
+				.menu_main-wrapper-inner
+					- var items = ["главная", "изделия", "опыт", "качество", "клиенты"]
+					- var anchors = ["main", "goods", "exp", "qual", "clients"]
+					each item,index in items
+						.menu_main-item(class="menu_main-item-"+(index+1), data-scroll=anchors[index])
+							span.menu_main-item-text=item
+		.popup_fon
+		section.popup_single-wrapper.popup_wrapper-outer
+			.popup_wrapper-inner.popup_wrapper
+				img.popup_cross(src="img/form_cross.png")
+				h2.popup_title="Обратный звонок"
+				form.popup_form
+					input.popup_input.input(type="text", data-placeholder="Ваше имя:", value="Ваше имя:", name="name")
+					input.popup_input.input(type="text", data-placeholder="Ваш номер телефон:", value="Ваш номер телефон:", name="phone")
+					input.popup_input.input(type="text", data-placeholder="Ваш Email:", value="Ваш Email:", name="email")
+					br
+					input.popup_button.button(type="button", value="Отправить")
+		section.popup_bill-wrapper.popup_wrapper-outer
+			.popup_wrapper-left.popup_bill-wrapper-left
+				img.popup_bill-medal(src="img/bill_medal.png")
+			.popup_wrapper-inner.popup_wrapper
+				img.popup_cross(src="img/form_cross.png")
+				h2.popup_title="Получите расчет стоимости нагрудных знаков прямо сейчас: "
+				form.popup_form
+					input.popup_input.input(type="text", data-placeholder="Ваше имя:", value="Ваше имя:", name="name")
+					input.popup_input.input(type="text", data-placeholder="Ваш номер телефон:", value="Ваш номер телефон:", name="phone")
+					input.popup_input.input(type="text", data-placeholder="Ваш Email:", value="Ваш Email:", name="email")
+					br
+					input.popup_button.button(type="button", value="Отправить")
+		section.popup_com-wrapper.popup_wrapper-outer
+			.popup_wrapper-left.popup_com-wrapper-left
+				h2.popup_com-title="с нами работают"
+				.popup_com-logos
+					- var logos = new Array(4);
+					each val, index in logos
+						if index == 2
+							br
+						.popup_com-logos-img(style="background-image: url(img/form_com-"+(index+1)+".png)")
+			.popup_wrapper-inner.popup_wrapper
+				img.popup_cross(src="img/form_cross.png")
+				h2.popup_title!="Оставьте заявку<br> на коммерческое предложение"
+				form.popup_form
+					input.popup_input.input(type="text", data-placeholder="Ваше имя:", value="Ваше имя:", name="name")
+					input.popup_input.input(type="text", data-placeholder="Ваш номер телефон:", value="Ваш номер телефон:", name="phone")
+					input.popup_input.input(type="text", data-placeholder="Ваш Email:", value="Ваш Email:", name="email")
+					br
+					input.popup_button.button(type="button", value="Отправить")
+		section.popup_commer-wrapper.popup_wrapper-outer
+			.popup_wrapper-left.popup_commer-wrapper-left
+				h2.popup_commer-title="За 2 года мы приняли участие в более чем 150 государственных тендерах и исполнили 32 госконтракта."
+			.popup_wrapper-inner.popup_wrapper
+				img.popup_cross(src="img/form_cross.png")
+				h2.popup_title!="Оставьте заявку<br> на коммерческое предложение"
+				form.popup_form
+					input.popup_input.input(type="text", data-placeholder="Ваше имя:", value="Ваше имя:", name="name")
+					input.popup_input.input(type="text", data-placeholder="Ваш номер телефон:", value="Ваш номер телефон:", name="phone")
+					input.popup_input.input(type="text", data-placeholder="Ваш Email:", value="Ваш Email:", name="email")
+					br
+					input.popup_button.button(type="button", value="Отправить")
+		section.popup_icons-wrapper.popup_wrapper-outer
+			.popup_wrapper-left.popup_com-wrapper-left
+				h2.popup_com-title="наши работы"
+				.popup_com-logos.popup_icons-logos
+					- var logos = new Array(4);
+					each val, index in logos
+						if index == 2
+							br
+						.popup_com-logos-img.popup_icons-logos-img(style="background-image: url(img/form_icon-"+(index+1)+".jpg)")
+			.popup_wrapper-inner.popup_wrapper
+				img.popup_cross(src="img/form_cross.png")
+				h2.popup_title!="Получите 3 эскиза бесплатно"
+				form.popup_form
+					input.popup_input.input(type="text", data-placeholder="Ваше имя:", value="Ваше имя:", name="name")
+					input.popup_input.input(type="text", data-placeholder="Ваш номер телефон:", value="Ваш номер телефон:", name="phone")
+					input.popup_input.input(type="text", data-placeholder="Ваш Email:", value="Ваш Email:", name="email")
+					br
+					input.popup_button.button(type="button", value="Отправить")
+		section.popup_wrapper-outer.thankyou_wrapper
+			img.popup_cross(src="img/form_cross.png")
+			h2.thankyou_title!="Спасибо!<br> Наш менеджер свяжется с вами в ближайшее время"
+
+		//- review
+		.review_fon
+			.review_photo-wrapper
+				.review_photo-wrapper-fill
+					.review_photo-cross
+					img.review_photo(src="", data-src="img/loader.gif")
+					img.review_loader(src="img/loader.gif")
+		img.test_img
+
+		script(src="http://code.jquery.com/jquery-3.0.0.min.js", integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=", crossorigin="anonymous")
+		script(type="text/javascript", src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+		script(src="js/review.js")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+		script(src="js/main.js")

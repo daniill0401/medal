@@ -1,0 +1,105 @@
+.first_main-wrapper, .first_get-wrapper {
+  font-family: AGP-bold; }
+
+.first_wrapper {
+  display: block;
+  position: relative;
+  margin-top: 105px;
+  padding-top: 10em;
+  padding-bottom: 2em;
+  text-align: center;
+  background: transparent url("../img/first_fon.png") scroll no-repeat center top/cover; }
+
+.first_main-wrapper {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  width: 73.6em;
+  padding: 0 5em;
+  display: inline-block; }
+
+.first_main-title {
+  font-size: 3em; }
+
+.first_main-caption {
+  margin-top: 1.3em;
+  color: #ffe94f;
+  font-size: 1.5em; }
+
+.first_main-desc {
+  margin-top: .3em;
+  font-size: 2em; }
+
+.first_main-line {
+  position: absolute;
+  top: 1.5em;
+  width: 9.375em;
+  height: 12.5em;
+  fill: none;
+  stroke: #f9c038;
+  stroke-width: 3.8em;
+  stroke-dashoffset: 780px;
+  stroke-dasharray: 780px;
+  transition: all ease-in-out .8s; }
+  .first_main-line-left {
+    left: 0; }
+  .first_main-line-right {
+    right: 0; }
+
+.first_medal-wrapper {
+  margin-top: -15em; }
+
+.first_medal-img {
+  width: 62em; }
+
+.first_get-wrapper {
+  text-transform: uppercase; }
+
+.first_get-title {
+  font-size: 2.5em; }
+
+.first_get-desc {
+  font-size: 3em;
+  color: #9a4a4e; }
+
+.first_get-medals {
+  margin-top: 1em;
+  width: 12em; }
+
+.first_get-input:not(:first-child) {
+  margin-left: 2em;
+  margin-top: 2em; }
+
+.first_get-button {
+  margin-top: 2em; }
+
+.animated .first_main-line {
+  stroke-dashoffset: 0; }
+
+@media (max-width: 1000px) {
+  .first_main-wrapper {
+    width: 95%; }
+  .first_main-line {
+    display: none; }
+  .first_medal-wrapper {
+    margin-top: -17%; }
+  .first_medal-img {
+    width: 80%; } }
+
+@media (max-width: 800px) {
+  .first_get-input-3 {
+    display: block;
+    margin: 1em auto !important; }
+  .first_get-button {
+    margin-top: 1em; } }
+
+@media (max-width: 500px) {
+  .first_wrapper {
+    margin-top: 50px; }
+  .first_main-wrapper {
+    width: 100%;
+    padding: 0 10px; }
+  .first_get-input {
+    display: block;
+    margin: 1em auto !important; } }

@@ -1,0 +1,123 @@
+.forth_main-title, .forth_main-check-title {
+  font-family: AGP-bold; }
+
+.forth_wrapper {
+  text-align: center;
+  padding: 6em 0; }
+
+.forth_main-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  white-space: nowrap;
+  width: 65em;
+  height: 39em; }
+  .forth_main-wrapper > * {
+    display: inline-block;
+    vertical-align: top; }
+
+.forth_main-left {
+  position: relative;
+  margin-top: -1.5em;
+  white-space: normal;
+  padding-left: 4.5em; }
+
+.forth_main-right {
+  position: relative;
+  margin-top: -2em;
+  text-align: right;
+  width: 25em;
+  padding-left: 1em; }
+
+.forth_main-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  stroke-width: 2px;
+  stroke: #f9c038;
+  fill: none; }
+
+.forth_main-man {
+  display: inline-block;
+  vertical-align: top;
+  width: 24.5em; }
+
+.forth_main-title {
+  text-transform: uppercase; }
+  .forth_main-title-first {
+    font-size: 2.52em; }
+  .forth_main-title-second {
+    font-size: 3em; }
+
+.forth_main-list-wrapper {
+  text-align: left;
+  font-family: "PT sans", sans-serif;
+  margin-top: 2em; }
+
+.forth_main-list-title {
+  font-weight: bold;
+  font-size: 1.2em; }
+
+.forth_main-list-ul {
+  list-style-image: url(../img/forth_list-square.png);
+  padding-left: 1em;
+  padding-top: .5em; }
+
+.forth_main-list-li {
+  padding-left: .5em;
+  line-height: 2;
+  font-size: 1.1em; }
+
+.forth_main-check-wrapper {
+  text-align: left;
+  margin-top: 1.4em;
+  display: inline-block; }
+
+.forth_main-check-title {
+  font-size: 1.7em; }
+
+.forth_main-check-caption {
+  font-family: "PT sans", sans-serif;
+  font-size: 1.2em;
+  text-align: right;
+  margin-top: .5em; }
+
+.forth_main-images {
+  margin-top: 2em; }
+
+.forth_main-img {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2em;
+  width: 8.3em;
+  height: 8em;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center center; }
+  .forth_main-img-1 {
+    margin-top: -1.5em; }
+  .forth_main-img-3 {
+    margin-top: 1.5em; }
+
+.forth_main-button {
+  text-align: center;
+  display: block;
+  margin: 3em auto;
+  color: #3b3b3b; }
+
+@media (max-width: 840px) {
+  .forth_wrapper {
+    padding-bottom: 0; }
+  .forth_main-wrapper {
+    text-align: center;
+    width: 90%;
+    height: auto; }
+  .forth_main-right {
+    display: none; }
+  .forth_main-line {
+    display: none; }
+  .forth_main-left {
+    display: inline-block;
+    padding-left: 0; } }

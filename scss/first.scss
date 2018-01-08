@@ -1,0 +1,155 @@
+@import "vars";
+
+.first {
+	&_wrapper {
+		display: block;
+		position: relative;
+		margin-top: #{$menu-height};
+		padding-top: 10em;
+		padding-bottom: 2em;
+		text-align: center;
+		background:transparent url('../img/first_fon.png') scroll no-repeat center top / cover;
+	}
+
+	&_main {
+		&-wrapper {
+			position: relative;
+			text-transform: uppercase;
+			font-weight: bold;
+			color: #fff;
+			width: 73.6em;
+			padding: 0 5em;
+			display: inline-block;
+			@extend %agp-bold;
+		}
+		&-title {
+			font-size: 3em;
+		}
+		&-caption {
+			margin-top: 1.3em;
+			color: #ffe94f;
+			font-size: 1.5em;
+		}
+		&-desc {
+			margin-top: .3em;
+			font-size: 2em;
+		}
+		&-line {
+			position: absolute;
+			top: 1.5em;
+			width: 9.375em;
+			height: 12.5em;
+			fill: none;
+			stroke: $main-color;
+			stroke-width: 3.8em;
+			stroke-dashoffset: 780px;
+			stroke-dasharray: 780px;
+			transition: all ease-in-out .8s;
+
+			&-left {
+				left: 0;
+			}
+			&-right {
+				right: 0;
+			}
+		}
+	}
+
+	&_medal {
+		&-wrapper {
+			margin-top: -15em;
+		}
+		&-img {
+			width: 62em;
+		}
+	}
+
+	&_get {
+		&-wrapper {
+			@extend %agp-bold;
+			text-transform: uppercase;
+		}
+		&-title {
+			font-size: 2.5em;
+		}
+
+		&-desc {
+			font-size: 3em;
+			color: #9a4a4e;
+		}
+
+		&-medals {
+			margin-top: 1em;
+			width: 12em;
+		}
+		&-input:not(:first-child) {
+			margin-left: 2em;
+			margin-top: 2em;
+		}
+		&-button {
+			margin-top: 2em;
+		}
+	}
+}
+
+.animated .first_main-line {
+	stroke-dashoffset: 0;
+	}
+
+@media (max-width: 1000px) {
+	.first {
+		&_main {
+			&-wrapper {
+				width: 95%;
+			}
+			&-line {
+				display: none;
+			}
+		}
+		&_medal {
+			&-wrapper {
+				margin-top: -17%;
+			}
+			&-img {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px){
+	.first {
+		&_get {
+			&-input {
+				&-3 {
+					display: block;
+					margin: 1em auto!important;
+				}
+			}
+			&-button {
+				margin-top: 1em;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.first {
+		&_wrapper {
+			margin-top: 50px;
+		}
+		&_main {
+			&-wrapper {
+				width: 100%;
+				padding: 0 10px;
+			}
+		}
+		&_get {
+			&-input {
+				display: block;
+				margin: 1em auto!important;
+			}
+		}
+	}
+
+}

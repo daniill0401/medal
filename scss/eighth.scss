@@ -1,0 +1,101 @@
+@import "vars";
+
+.eighth {
+	&_wrapper {
+		position: relative;
+		z-index: 10;
+		background:transparent url('../img/eighth_fon.png') scroll no-repeat center bottom / cover;
+		padding-bottom: 8em;
+	}
+
+	&_title {
+		color: #fff;
+	}
+
+	&_slider {
+		&-wrapper {
+			position: relative;
+			width: 56em;
+			margin: auto;
+			margin-top: 3em;
+		}
+		&-item {
+			&-wrapper {
+				position: relative;
+				height: 20em!important;
+				cursor: pointer;
+			}
+			&-back {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background:transparent url('../img/eighth_item-back.png') scroll no-repeat center center / contain;
+			}
+
+			&-img {
+				margin: 5% 0 0 5%;
+				height: 90%;
+				width: 90%;
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+		}
+		&-arrow {
+			position: absolute;
+			top: 50%;
+			width: 4.5em;
+			margin-top: -2em;
+			cursor: pointer;
+			z-index: 1000;
+			&-prev {
+				left: -5em;
+			}
+			&-next {
+				right: -5em;
+			}
+		}
+	}
+}
+
+@media (max-width: 850px){
+	.eighth {
+		&_slider {
+			&-wrapper {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media (max-width: 650px){
+	.eighth {
+		&_slider {
+			&-wrapper {
+				width: 70%;
+			}
+		}
+	}
+}
+
+@media (max-width: 500px){
+	.eighth {
+		&_slider {
+			&-wrapper {
+				width: 65%;
+			}
+			&-arrow {
+				width: 4em;
+				&-prev {
+					left: -3em;
+				}
+				&-next {
+					right: -3em;
+				}
+			}
+		}
+	}
+}

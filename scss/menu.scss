@@ -1,0 +1,244 @@
+@import "vars";
+
+.menu {
+	&_wrapper {
+		background-color: #000;
+		position: fixed;
+		width: 100%;
+		// min-width: 1000px;
+		color: #fff;
+		text-align: center;
+		height: $menu_height;
+		border-bottom: .3em solid #{$main-color};
+		z-index: 1000;
+
+		&-inner {
+			position: relative;
+			display: inline-block;
+
+			> * {
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	&_logo {
+		$logo_width: 10em;
+		&-wrapper {
+			width: $logo_width;
+			height: $menu_height;
+		}
+		&-img {
+			width: 100%;
+		}
+	}
+
+	&_address {
+		&-wrapper {
+			text-align: left;
+			font-size: .8em;
+			margin-left: 4em;
+			font-family: $main-font;
+		}
+	}
+
+	&_main {
+		&-wrapper {
+			margin-left: 2em;
+		}
+
+		&-title {
+			display: none;
+			font-family: $main-font;
+			font-size: 1em;
+			text-transform: uppercase;
+			border: 1px solid $main-color;
+			padding: 0 2em;
+			line-height: 2;
+			cursor: pointer;
+			transition: all ease-in-out .2s;
+			&:hover {
+				background-color: $main-color;
+			}
+		}
+
+		&-item {
+			$offset: 1.9em;
+			position: relative;
+			display: inline-block;
+			padding: 0 $offset;
+			padding-bottom: 2px;
+			cursor: pointer;
+
+			&:not(:last-child):after {
+				content: "";
+				width: 6px;
+				height: 6px;
+				background-color: #{$main-color};
+				position: absolute;
+				right: -3px;
+				top: 50%;
+				margin-top: -3px;
+			}
+
+			&-text {
+				position: relative;
+				text-transform: uppercase;
+				font-size: .8em;
+				font-weight: bold;
+				font-family: #{$main-font};
+				&:after, &:before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					width: 0;
+					height: 2px;
+					margin-top: -1px;
+					background-color: #{$main-color};
+					transition: width .2s ease-in-out;
+				}
+				&:before {
+					left: -#{$offset+.3};
+				}
+				&:after {
+					right: -#{$offset+.3};
+				}
+			}
+
+			&:first-child &-text:before, &:last-child &-text:after {
+				display: none;
+			}
+
+			&:hover &-text:after, &:hover &-text:before {
+				width: #{$offset - .8};
+			}
+		}
+	}
+
+	&_phones {
+		&-wrapper {
+			margin-left: 2em;
+			@extend %agp-md;
+			font-size: 1.5em;
+			> * {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+		&-icon {
+			position: relative;
+			margin-top: .2em;
+			margin-right: .7em;
+		}
+	}
+
+	&_button {
+		position: absolute;
+		right: 0;
+		bottom: -2.8em;
+		background-color: #{$main-color};
+		color: #000;
+		line-height: 3em;
+		padding-bottom: .1em;
+		padding: 0 2em;
+		cursor: pointer;
+		font-family: #f3cf4a;
+		transition: all ease-in-out .2s;
+		display: inline-block;
+		font-size: 1em;
+		font-family: $main-font;
+		&:hover {
+			background-color: #ECBE19;
+		}
+	}
+}
+
+@media (max-width: 1000px){
+	.menu {
+		&_wrapper {
+			// display: none;
+		}
+		&_address {
+			&-wrapper {
+				margin-left: 2em;
+			}
+		}
+		&_main {
+			&-wrapper {
+				margin-left: 0;
+				position: relative;
+				padding: 0 4em;
+				&-inner {
+					display: none;
+					border: 1px solid $main-color;
+					width: 20em;
+					position: absolute;
+					background: black;
+					z-index: 20000;
+					margin-left: -6.5em;
+				}
+			}
+			&-title {
+				display: inline-block;
+			}
+			&-item {
+				display: block;
+				padding: .5em 0;
+				&-text:before, &-text:after {
+					display: none;
+				}
+
+				&:after {
+					display: none;
+				}
+			}
+		}
+		&_phones {
+			&-wrapper {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px){
+	.menu {
+		&_wrapper {
+			&:before {
+				content: "";
+				display: inline-block;
+				vertical-align: middle;
+				height: 100%;
+			}
+			&-inner {
+				position: static;
+			}
+		}
+		&_main {
+			&-wrapper {
+				padding-left: 0;
+				&-inner {
+					left: 50%;
+					margin-left: -5.5em;
+				}
+			}
+		}
+		&_logo {
+			&-wrapper {
+				display: none;
+			}
+		}
+		&_address {
+			&-wrapper {
+				display: none;
+			}
+		}
+
+		&_button {
+			left: 50%;
+			right: auto;
+			margin-left: -5em;
+		}
+	}
+}

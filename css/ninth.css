@@ -1,0 +1,109 @@
+.ninth_wrapper {
+  margin-top: -4em;
+  position: relative;
+  z-index: 9;
+  background: transparent url("../img/ninth_fon.png") scroll no-repeat center center/cover;
+  text-align: center; }
+  .ninth_wrapper > * {
+    display: inline-block;
+    vertical-align: top; }
+
+.ninth_left {
+  width: 50%;
+  float: left; }
+
+.ninth_right {
+  float: left;
+  width: 50%; }
+  .ninth_right-form {
+    position: relative;
+    background: transparent url("../img/ninth_form-fon.png") scroll no-repeat center center/cover;
+    display: inline-block;
+    padding: 5.5em 9em;
+    float: left;
+    margin-left: 4em; }
+  .ninth_right-input {
+    margin-left: 0;
+    display: block;
+    margin-top: 1em; }
+
+.ninth_medal {
+  position: absolute;
+  width: 15em;
+  left: -7em;
+  bottom: -7em; }
+
+.ninth_title {
+  display: block; }
+
+.ninth_blocks {
+  display: table;
+  float: right;
+  margin-right: 5em;
+  margin-top: 3em; }
+
+.ninth_block {
+  display: table-cell;
+  position: relative;
+  z-index: 1;
+  width: 12em;
+  height: 11em;
+  text-align: center;
+  padding: 0 1em 0 1em;
+  font-family: "PT sans", sans-serif;
+  text-transform: uppercase;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background ease-in-out .3s, transform ease-in-out .3s; }
+  .ninth_block:hover {
+    background-color: #f9c038;
+    transform: scale(1.1);
+    z-index: 2; }
+  .ninth_block-title {
+    margin-top: 1em;
+    font-size: 1em; }
+  .ninth_block-1 img {
+    width: 2.75em; }
+  .ninth_block-2 img {
+    width: 3.25em; }
+  .ninth_block-3 img {
+    width: 3.25em; }
+  .ninth_block-4 img {
+    width: 3.3125em; }
+  .ninth_block-5 img {
+    width: 3.375em; }
+  .ninth_block-6 img {
+    width: 3.125em; }
+
+@media (max-width: 1200px) {
+  .ninth_left, .ninth_right {
+    font-size: 13px; } }
+
+@media (max-width: 1100px) {
+  .ninth_left {
+    font-size: 12px;
+    width: 55%; }
+  .ninth_right {
+    font-size: 10px;
+    width: 45%; } }
+
+@media (max-width: 930px) {
+  .ninth_left, .ninth_right {
+    display: block;
+    margin: 1em auto;
+    width: 100%; }
+  .ninth_blocks {
+    margin: 3em auto;
+    float: none; }
+  .ninth_right-form {
+    float: none; } }
+
+@media (max-width: 500px) {
+  .ninth_block {
+    display: block;
+    padding-top: 2em; }
+  .ninth_right-form {
+    padding: 3em 4em;
+    padding-right: 2em; } }

@@ -1,0 +1,229 @@
+@import "vars";
+
+.seventh {
+	&_wrapper {
+		background:transparent url('../img/seventh_fon.png') scroll repeat center top;
+		background-size: 125em auto;
+		text-align: center;
+		padding: 4em 0;
+	}
+
+	&_top {
+		&-wrapper {
+			> * {
+				display: inline-block;
+				vertical-align: top;
+				text-align: left;
+			}
+		}
+	}
+
+	&_left {
+		width: 28em;
+		&-items {
+			margin-top: 5em;
+			padding-left: .5em;
+		}
+
+		&-item {
+			display: inline-block;
+			margin-right: 1em;
+			border: 3px solid $main-color;
+			width: 5em;
+			height: 5em;
+			background-size: cover;
+			background-position: center center;
+			cursor: pointer;
+		}
+	}
+
+	&_right {
+		width: 50em;
+		color: #000;
+
+		&-indicators {
+			margin-top: .7em;
+			font-size: 2.1em;
+			text-transform: uppercase;
+			@extend %agp-bold;
+			&-item {
+				&-right {
+					margin-left: 2em;
+				}
+			}
+		}
+	}
+
+	&_logo {
+		width: 7.625em;
+	}
+
+	&_title {
+		margin-top: 1em;
+		padding-right: 2em;
+		font-size: 2.5em;
+		text-transform: uppercase;
+		@extend %agp-bold;
+	}
+
+	&_desc {
+		font-family: $main-font;
+		font-size: 1em;
+		margin-top: .7em;
+		padding-right: 8em;
+	}
+
+
+
+	&_slider {
+		&-wrapper {
+			position: relative;
+			border: 1px solid transparent;
+			.scaled {
+				right: 115%;
+				background:transparent url('../img/seventh_img-1.jpg') scroll no-repeat;
+			}
+		}
+
+		&-back {
+			position: absolute;
+			z-index: 100;
+			width: 23em;
+			height: 28em;
+			background:transparent url('../img/sixth_slider-back.png');
+			background-size: 100% 100%;
+		}
+		&-window {
+			width: 20em;
+			height: 25em;
+			margin: 1.5em 0 0 1.5em;
+			background:transparent url('../img/seventh_img-1.jpg') scroll no-repeat center center / cover;
+		}
+	}
+
+	&_bottom {
+		&-wrapper {
+			display: block;
+			margin-top: 2.7em;
+			padding-top: 4.5em;
+			text-align: center;
+		}
+		&-title {
+			font-size: 2em;
+			@extend %agp-bold;
+			text-transform: uppercase;
+		}
+	}
+
+	&_cert {
+		&-wrapper {
+			margin-top: 5em;
+			position: relative;
+			display: inline-block;
+			padding: .8em;
+			padding-bottom: .6em;
+		}
+		&-back {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background:transparent url('../img/seventh_bottom-back.png');
+			background-size: 100% 100%;
+		}
+		&-img {
+			position: relative;
+			width: 16.75em;
+			cursor: pointer;
+		}
+	}
+
+}
+
+@media (max-width: 1100px){
+	.seventh {
+		&_right {
+			width: 45em;
+		}
+	}
+}
+
+@media (max-width: 930px){
+	.seventh {
+		&_right {
+			width: 40em;
+			& > * {
+				padding-right: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 835px){
+	.seventh {
+		&_right {
+			width: 35em;
+		}
+	}
+}
+
+@media (max-width: 800px){
+	.seventh {
+		&_right {
+			width: 32em;
+		}
+	}
+}
+
+@media (max-width: 760px){
+	.seventh {
+		&_right {
+			width: 29em;
+		}
+	}
+}
+
+@media (max-width: 700px){
+	.seventh {
+		&_right {
+			width: 25em;
+		}
+	}
+}
+
+@media (max-width: 675px){
+	.seventh {
+		&_wrapper {
+				background:transparent url('../img/seventh_top-fon.png') scroll no-repeat center center;
+				background-size: auto 100%;
+		}
+		&_left,&_right {
+			display: block;
+			margin: 1em auto;
+		}
+		&_left {
+			text-align: center;
+			&-items {
+				display: inline-block;
+			}
+		}
+		&_slider {
+			&-wrapper {
+				text-align: center;
+				& > * {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 400px){
+	.seventh {
+		&_left {
+			width: 100%;
+		}
+	}
+
+}

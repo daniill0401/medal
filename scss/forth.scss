@@ -1,0 +1,161 @@
+@import "vars";
+
+.forth {
+	&_wrapper {
+		text-align: center;
+		padding: 6em 0;
+	}
+
+	&_main {
+		&-wrapper {
+			position: relative;
+			display: inline-block;
+			text-align: left;
+			white-space: nowrap;
+			width: 65em;
+
+			height: 39em;
+			> * {
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+
+		&-left {
+			position: relative;
+			margin-top: -1.5em;
+			white-space: normal;
+			padding-left: 4.5em;
+		}
+		&-right {
+			position: relative;
+			margin-top: -2em;
+			text-align: right;
+			width: 25em;
+			padding-left: 1em;
+		}
+
+		&-line {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			stroke-width: 2px;
+			stroke: $main-color;
+			fill: none;
+		}
+
+		&-man {
+			display: inline-block;
+			vertical-align: top;
+			width: 24.5em;
+		}
+
+		&-title {
+			@extend %agp-bold;
+			text-transform: uppercase;
+			&-first {
+				font-size: 2.52em;
+			}
+
+			&-second {
+				font-size: 3em;
+			}
+		}
+
+		&-list {
+			&-wrapper {
+				text-align: left;
+				font-family: $main-font;
+				margin-top: 2em;
+			}
+			&-title {
+				font-weight: bold;
+				font-size: 1.2em;
+			}
+
+			&-ul {
+				list-style-image: url(../img/forth_list-square.png);
+				padding-left: 1em;
+				padding-top: .5em;
+			}
+			&-li {
+				padding-left: .5em;
+				line-height: 2;
+				font-size: 1.1em;
+			}
+		}
+
+		&-check {
+			&-wrapper {
+				text-align: left;
+				margin-top: 1.4em;
+				display: inline-block;
+			}
+			&-title {
+				@extend %agp-bold;
+				font-size: 1.7em;
+			}
+			&-caption {
+				font-family: $main-font;
+				font-size: 1.2em;
+				text-align: right;
+				margin-top: .5em;
+			}
+		}
+
+		&-images {
+			margin-top: 2em;
+		}
+
+		&-img {
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 2em;
+			width: 8.3em;
+			height: 8em;
+			cursor: pointer;
+			background-size: cover;
+			background-position: center center;
+			&-1 {
+				margin-top: -1.5em;
+			}
+			&-3 {
+				margin-top: 1.5em;
+			}
+		}
+
+		&-button {
+			text-align: center;
+			display: block;
+			margin: 3em auto;
+			color: #3b3b3b;
+		}
+	}
+}
+
+@media (max-width: 840px){
+	.forth {
+		&_wrapper {
+			padding-bottom: 0;
+		}
+		&_main {
+			&-wrapper {
+				text-align: center;
+				width: 90%;
+				height: auto;
+			}
+			&-right {
+				display: none;
+			}
+			&-line {
+				display: none;
+			}
+			&-left {
+				display: inline-block;
+				padding-left: 0;
+			}
+		}
+	}
+}
